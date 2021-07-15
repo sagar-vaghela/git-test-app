@@ -11,6 +11,8 @@ const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+    <div id="fb-root"></div>
+    
       <App />
     </Provider>
   </React.StrictMode>,
