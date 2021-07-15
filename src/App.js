@@ -1,5 +1,6 @@
 import './App.css';
 import RootContainer from './container/RootContainer';
+import Google from './container/Google';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,17 +18,16 @@ function App() {
       <Router>
         
       <div> 
-        <h1><Link to="/login-with-facebook">facebook</Link></h1>
-        <h1><Link to="/login-with-github">github</Link></h1>
+        
         <h1><Link to="/login-with-google">google</Link></h1>
       </div>
         <Switch>
             <Route exact path="/">
               <RootContainer />
             </Route>
-            <Route exact path="/login-with-facebook" component={Facebook} />
-            <Route exact path="/login-with-github" component={Github} />
-            <Route exact path="/login-with-google" component={Google} />
+              <Route exact path="/login-with-google" >
+                <Google/>
+              </Route>     
         </Switch>
       </Router>
      </div>
@@ -35,17 +35,3 @@ function App() {
 }
 
 export default App;
-
-
-const Facebook = () => {
-  return(<div>login-with-Facebook</div>)
-}
-
-
-const Google = () => {
-  return(<div>login-with-Google</div>)
-}
-
-const Github = () => {
-  return(<div>login-with-Github</div>)
-}
