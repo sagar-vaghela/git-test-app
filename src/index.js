@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { configureStore } from "./store";
 import { Provider } from "react-redux";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 

@@ -1,48 +1,45 @@
-import Modal from 'react-modal';
 import React, { Component } from "react";         
-
-const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
+import { Button, Modal } from 'react-bootstrap';
 class Googlemap extends Component{
     constructor(){
         super();
-        this.state={modalIsOpen : false}
+        this.state={show : false}
     }
     openModal=()=>{
-        this.setState({modalIsOpen : true})
+        this.setState({show : true})
     }
     closeModal=()=>{
-        this.setState({modalIsOpen : false})
+        this.setState({show : false})
     }
     render(){
+        const { show } = this.state;
+        console.log(show);
         return(
-            <section>
-                <button onClick={this.openModal}>Open Modal</button>
-                    <Modal
-                        isOpen={this.state.modalIsOpen}
-                        onAfterOpen={this.state.afterOpenModal}
-                        onRequestClose={this.state.closeModal}
-                        style={customStyles}
-                        contentLabel="Example Modal">
-                        <button onClick={this.closeModal}>close</button>
-                            <div>I am a modal</div>
-                            <form>
-                                <input />
-                                <button>tab navigation</button>
-                                <button>stays</button>
-                                <button>inside</button>
-                                <button>the modal</button>
-                            </form>
-                    </Modal>
-            </section>
+            <div>
+                <Button variant="primary" onClick={this.openModal}>
+                        Launch vertically centered modal
+                    </Button>
+                <Modal
+                    show={show}
+                    onHide={this.closeModal}
+                    backdrop="static"
+                    keyboard={false}
+                >
+                    <Modal.Header>
+                    <Modal.Title>Modal title</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                    I will not close if you click outside me. Don't even try to press
+                    escape key.
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={this.closeModal}>
+                        Close
+                    </Button>
+                    <Button variant="primary">Understood</Button>
+                    </Modal.Footer>
+                </Modal>
+            </div>
         )
     }
 }
