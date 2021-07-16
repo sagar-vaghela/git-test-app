@@ -1,6 +1,7 @@
 import './App.css';
 import RootContainer from './container/RootContainer';
 import Facebook from './container/Facebook';
+import Google from './container/Google';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,8 +19,7 @@ function App() {
       <Router>
         
       <div> 
-        <h1><Link to="/login-with-facebook">facebook</Link></h1>
-        <h1><Link to="/login-with-github">github</Link></h1>
+        
         <h1><Link to="/login-with-google">google</Link></h1>
       </div>
         <Switch>
@@ -29,6 +29,9 @@ function App() {
             <Route exact path="/login-with-facebook">
             <Facebook />
             </Route>
+              <Route exact path="/login-with-google" >
+                <Google/>
+              </Route>     
         </Switch>
       </Router>
      </div>
