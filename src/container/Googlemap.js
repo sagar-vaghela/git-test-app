@@ -16,17 +16,12 @@ class Googlemap extends Component{
         super();
         this.state={modalIsOpen : false}
     }
-
     openModal=()=>{
         this.setState({modalIsOpen : true})
     }
-    // afterOpenModal=()=>{
-    //     this.setState(subtitle.style.color = '#f00')
-    // }
-    closeModal=()=>{
+    openModal=()=>{
         this.setState({modalIsOpen : false})
     }
-
     render(){
         return(
             <section>
@@ -38,17 +33,17 @@ class Googlemap extends Component{
                         style={customStyles}
                         contentLabel="Example Modal">
                         <button onClick={this.closeModal}>close</button>
-                        <div>I am a modal</div>
-                        <form>
-                        <input />
-                        <button>tab navigation</button>
-                        <button>stays</button>
-                        <button>inside</button>
-                        <button>the modal</button>
-                        </form>
+                            <div>I am a modal</div>
+                            <form>
+                                <input />
+                                <button>tab navigation</button>
+                                <button>stays</button>
+                                <button>inside</button>
+                                <button>the modal</button>
+                            </form>
                     </Modal>
             </section>
-        );
+        )
     }
 }
 export default Googlemap;
