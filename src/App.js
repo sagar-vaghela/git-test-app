@@ -21,6 +21,7 @@ function App() {
       <div> 
         
         <h1><Link to="/login-with-google">google</Link></h1>
+        <h1><Link to="/login-with-facebook">facebook</Link></h1>
       </div>
         <Switch>
             <Route exact path="/">
