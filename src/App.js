@@ -2,6 +2,8 @@ import './App.css';
 import RootContainer from './container/RootContainer';
 import Facebook from './container/Facebook';
 import Google from './container/Google';
+import Googlemap from './container/Googlemap';
+
 import {
   BrowserRouter as Router,
   Switch,
