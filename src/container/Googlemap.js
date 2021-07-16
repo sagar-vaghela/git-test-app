@@ -19,7 +19,7 @@ class Googlemap extends Component{
     openModal=()=>{
         this.setState({modalIsOpen : true})
     }
-    openModal=()=>{
+    closeModal=()=>{
         this.setState({modalIsOpen : false})
     }
     render(){
