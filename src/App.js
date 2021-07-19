@@ -5,6 +5,8 @@ import Google from './container/Google';
 import Github from './container/Github';
 import Googlemap from './container/Googlemap';
 
+// import Instagram from './container/Instagram';
+import GMap from './container/GMap'
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +29,8 @@ function App() {
         <h1><Link to="/login-with-facebook">facebook</Link></h1>
         <h1><Link to="/login-with-github">github</Link></h1>
         <h1><Link to="/google-map">Googlemap</Link></h1>
+        {/* <h1><Link to="/login-with-instagram">instagram</Link></h1> */}
+        <h1><Link to="/login-with-Gmap">GMap</Link></h1>
       </div>
         <Switch>
             <Route exact path="/">
@@ -43,6 +47,12 @@ function App() {
               </Route>   
               <Route exact path="/google-map" >
                 <Googlemap/>
+              </Route>  
+              {/* <Route exact path="/login-with-instagram" >
+                <Instagram/>
+              </Route>    */}
+              <Route exact path="/login-with-GMap" >
+                <GMap/>
               </Route>   
         </Switch>
       </Router>

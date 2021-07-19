@@ -7,12 +7,12 @@ import Item from "../component/item";
 
 class RootContainer extends Component{
 
-    componentDidMount () {
-        console.log('called')
-        // this.props.getPosts();
-        const { getPosts } = this.props;
-        getPosts();
-    }
+  componentDidMount () {
+      console.log('called')
+      // this.props.getPosts();
+      const { getPosts } = this.props;
+      getPosts();
+  }
 
   render(){
     const {error, isLoading, posts } = this.props;
