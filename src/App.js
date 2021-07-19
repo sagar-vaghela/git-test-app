@@ -2,6 +2,9 @@ import './App.css';
 import RootContainer from './container/RootContainer';
 import Facebook from './container/Facebook';
 import Google from './container/Google';
+import Github from './container/Github';
+import Googlemap from './container/Googlemap';
+
 // import Instagram from './container/Instagram';
 import GMap from './container/GMap'
 import {
@@ -24,6 +27,8 @@ function App() {
         
         <h1><Link to="/login-with-google">google</Link></h1>
         <h1><Link to="/login-with-facebook">facebook</Link></h1>
+        <h1><Link to="/login-with-github">github</Link></h1>
+        <h1><Link to="/google-map">Googlemap</Link></h1>
         {/* <h1><Link to="/login-with-instagram">instagram</Link></h1> */}
         <h1><Link to="/login-with-Gmap">GMap</Link></h1>
       </div>
@@ -36,6 +41,12 @@ function App() {
             </Route>
               <Route exact path="/login-with-google" >
                 <Google/>
+              </Route>   
+              <Route exact path="/login-with-github" >
+                <Github/>
+              </Route>   
+              <Route exact path="/google-map" >
+                <Googlemap/>
               </Route>  
               {/* <Route exact path="/login-with-instagram" >
                 <Instagram/>
