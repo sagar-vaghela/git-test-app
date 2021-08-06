@@ -1,7 +1,6 @@
 
 import Axios from "axios";
 
-
 // Get Items
 const getPostsStarted = () => ({
     type: 'GET_POSTS_STARTED'
